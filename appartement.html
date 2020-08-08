@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>caschbackdom.ru | Анкета</title>
+    <title>caschbackdom.ru | Заявка на подбор квартиры</title>
     <link rel="stylesheet" href="styles/main.min.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
@@ -142,7 +142,7 @@
                 </div>
                 <form action="appartement/mail.php" method="POST">
                     <input type="hidden" name="project_name" value="caschbackdom" required>
-                    <input type="hidden" name="form_subject" value="Анкета 2" required>
+                    <input type="hidden" name="form_subject" value="Заявка на подбор квартиры" required>
                     <div class="conc_form">
                         <div class="conc_form_wrap fir_conc">
                             <p class="conc_f_text">ФИО:</p>
@@ -190,9 +190,11 @@
                                 <div class="det_form_wrap  det_sec">
                                     <p class="det_form_text izm">Стоимость квартиры от и до в рублях:</p>
                                     <div class="fr_to">
-                                        <input name="Price_kvartiri(from)" placeholder="Стоимость от" type="text"
-                                            required>
-                                        <input name="Price_kvartiri(to)" placeholder="до" type="text" required>
+                                        <input class="small" name="Price_kvartiri(from)" placeholder="Стоимость от" type="number"  
+                                            required oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                                            type = "number"
+                                            maxlength = "15">
+                                        <input name="Price_kvartiri(to)" placeholder="до" type="number" required>
                                     </div>
                                 </div>
                             </div>
@@ -225,15 +227,19 @@
                                 <div class="det_form_wrap d_t">
                                     <p class="det_form_text">Площадь квартиры</p>
                                     <div class="fr_to">
-                                        <input name="Ploschad_kvartiri(from)" placeholder="от" type="text" required>
-                                        <input name="Ploschad_kvartiri(to)" placeholder="до" type="text" required>
+                                        <input oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                                            type = "number"
+                                            maxlength = "8" class="small" name="Ploschad_kvartiri(from)" placeholder="от" type="number" required>
+                                        <input name="Ploschad_kvartiri(to)" placeholder="до" type="number" required>
                                     </div>
                                 </div>
                                 <div class="det_form_wrap d_f">
                                     <p class="det_form_text">Площадь кухни</p>
                                     <div class="fr_to">
-                                        <input name="Ploschad_kuhni(from)" placeholder="от" type="text" required>
-                                        <input name="Ploschad_kuhni(to)" placeholder="до" type="text" required>
+                                        <input oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                                            type = "number"
+                                            maxlength = "8" class="small" name="Ploschad_kuhni(from)" placeholder="от" type="number" required>
+                                        <input name="Ploschad_kuhni(to)" placeholder="до" type="number" required>
                                     </div>
                                 </div>
                             </div>
@@ -260,15 +266,19 @@
                                     <p class="det_form_text">Этаж
                                     </p>
                                     <div class="fr_to">
-                                        <input name="Etazh(from)" placeholder="от" type="text" required>
-                                        <input name="Etazh(to)" placeholder="до" type="text" required>
+                                        <input oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                                            type = "number"
+                                            maxlength = "8" class="small" name="Etazh(from)" placeholder="от" type="number" required>
+                                        <input name="Etazh(to)" placeholder="до" type="number" required>
                                     </div>
                                 </div>
                                 <div class="det_form_wrap d_t">
                                     <p class="det_form_text">Этажность дома</p>
                                     <div class="fr_to">
-                                        <input name="Etazhnost_doma(from)" placeholder="от" type="text" required>
-                                        <input name="Etazhnost_doma(to)" placeholder="до" type="text" required>
+                                        <input oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                                            type = "number"
+                                            maxlength = "8" class="small" name="Etazhnost_doma(from)" placeholder="от" type="number" required>
+                                        <input name="Etazhnost_doma(to)" placeholder="до" type="number" required>
                                     </div>
                                 </div>
                             </div>
